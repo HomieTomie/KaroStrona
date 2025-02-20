@@ -1,0 +1,101 @@
+@keyframes moveBackground{
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -374% -374%;
+    }
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(/images/coquette\ seamless\ pattern.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    /*animation: moveBackground 10s linear infinite;*/
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    background-color: beige;
+}
+
+.banner_content{
+    display: flex;
+    align-items: center;
+}
+
+.pfp img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.navigation-main{
+    display: flex;
+    border-width: 20px;
+    height: 600px;
+    border-style: solid;
+    border-top: 0px;
+    margin-bottom: 15px;
+    max-width: 70%;
+}
+
+.navigation img{
+    height: 60px;
+    width: 60px;
+}
+
+.navigation-buttons{
+    width: 100%;
+    display: flex;
+}
+
+.button{
+    width: 100%;
+    margin: 10px;
+}
+
+.content {
+    width: 80%;
+    padding: 10px;
+}
+
+.update-comment-section{
+    display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 80%;
+        margin: 20px auto;
+        gap: 20px;
+        background-color: beige;
+}
+
+.updates {
+    width: 50%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.comments {
+    width: 50%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.linkbutton img {
+    width: 16px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 5px;
+}

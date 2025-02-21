@@ -1,101 +1,156 @@
-@keyframes moveBackground{
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -374% -374%;
-    }
+:root{
+    --main-background: #F3E7DC;
+    --div-background: #EBF5FE;
+    --div-border: #9FA9B2;
+    --comments: #FFFFFF;
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-image: url(/images/coquette\ seamless\ pattern.jpg);
+    background-image: url(/images/coquette_seamless_pattern.jpg);
     background-size: cover;
     background-repeat: repeat;
-    /*animation: moveBackground 10s linear infinite;*/
 }
 
 .main{
+    background-color: antiquewhite;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    width: 60%;
+    height: 90%;
+    border-radius: 5%;
 }
 
-.banner{
+.name, .top, .middle, .bottom{
+    background-color: var(--div-background);
+    border-radius: 5%;
+    border: 1px solid var(--div-border);
+}
+
+.name{
+    width: 75%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-image{
+    margin-left: 2%;
+    margin-top: 0.7%;
+    margin-bottom: 2%;
+    background-color: azure;
+    width: 15%;
+}
+
+.contain{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: auto;
-    background-color: beige;
+    object-fit: contain;
+    border-radius: 20%;
 }
 
-.banner_content{
-    display: flex;
-    align-items: center;
-}
-
-.pfp img{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.navigation-main{
-    display: flex;
-    border-width: 20px;
-    height: 600px;
-    border-style: solid;
-    border-top: 0px;
-    margin-bottom: 15px;
-    max-width: 70%;
-}
-
-.navigation img{
-    height: 60px;
-    width: 60px;
-}
-
-.navigation-buttons{
-    width: 100%;
-    display: flex;
-}
-
-.button{
-    width: 100%;
-    margin: 10px;
-}
-
-.content {
+.profile-text{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     width: 80%;
-    padding: 10px;
 }
 
-.update-comment-section{
+.profile-text p{
+    margin-left: 25%;
+    margin-top: 5%;
+    font-size: 200%;
+}
+
+.top {
+    width: 85%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 80%;
-        margin: 20px auto;
-        gap: 20px;
-        background-color: beige;
+    flex-direction: row;
 }
 
-.updates {
-    width: 50%;
-    padding: 15px;
-    border-radius: 10px;
+.navigation{
+    width: 25%;
+    height: 80%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    margin-left: 4%;
+    margin-right: 0%;
+    display: flex;
+    flex-direction: column;
+    border-right-style: solid;
+
 }
 
-.comments {
-    width: 50%;
-    padding: 15px;
-    border-radius: 10px;
+.navigation-button{
+    margin-right: 2%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 80%;
+    height: 15%;
 }
 
-.linkbutton img {
-    width: 16px;
-    height: auto;
-    vertical-align: middle;
-    margin-left: 5px;
+.welcome{
+    width: 75%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 4%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.middle {
+    width: 75%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.update{
+    width: 60%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 4%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.update-banner{
+    text-align: center;
+    margin-top: 2%;
+    font-size: 120%;
+}
+
+.update-list{
+    font-size: medium;
+}
+
+.comment{
+    width: 40%;
+    height: 80%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    margin-left: 4%;
+    margin-right: 0%;
+    display: flex;
+    flex-direction: column;
+    border-left-style: solid;
+}
+
+.bottom {
+    width: 85%;
+    height: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }

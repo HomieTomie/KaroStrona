@@ -6,6 +6,43 @@
     <title>The web site of kar0u0</title>
     <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
   </head>
+  <script>
+    // Ustaw datę Eurowizji 2025 (13 maja 2025, 20:00 UTC)
+    const eurovisionDate = new Date("May 13, 2025 20:00:00 GMT+0000").getTime();
+
+    // Funkcja odliczania
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const timeLeft = eurovisionDate - now;
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      // Wyświetl odliczanie
+      document.getElementById(
+        "countdown"
+      ).innerHTML = `(${days}d ${hours}h ${minutes}m ${seconds}s)`;
+
+      // Jeśli czas się skończy
+      if (timeLeft < 0) {
+        document.getElementById("countdown").innerHTML = "(Już jest!)";
+      }
+    }
+
+    // Aktualizuj co sekundę
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Wywołaj od razu, by uniknąć opóźnienia
+
+    // Ustaw scroll na górę po załadowaniu strony
+    window.onload = function () {
+      const updateList = document.querySelector(".update-list");
+      updateList.scrollTop = 0; /* Przewija na samą górę */
+    };
+  </script>
   <body>
     <div class="main">
       <div class="name">
@@ -25,12 +62,11 @@
         </div>
         <div class="welcome">
           <h2>Witam na mojej stronie!</h2>
-          <h3>Blablabalbalba</h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. A vel
-            praesentium sequi at ipsum molestias modi sunt cupiditate sint est
-            minima quod voluptates alias dolorum doloribus, eaque rerum quam
-            totam!
+            Hej!! Jestem Kar0u0, a to mój mały internetowy kącik! Tworzę go
+            sama, wkładając w to całe serce. Tutaj wylewam swoje myśli i
+            pokazuję, co mnie kręci – sztuka, muzyka, seriale koreańskie i gry.
+            Rozgość się, baw się dobrze i mam nadzieję, że Ci się spodoba!!
           </p>
         </div>
       </div>
@@ -38,30 +74,36 @@
         <div class="update">
           <div class="update-banner">Update'y Życiowe</div>
           <div class="update-list">
-            <p>13.02 - dzien przed walentynkami</p>
-            <p>10.02 - życie jest supi</p>
-            <p>8.02 - kocham chłopaka, yupiyupi jest wszystko supi :3</p>
+            <p><b>13.02 - </b>dzień przed walentynkami</p>
+            <p><b>10.02 - </b>życie jest supi</p>
+            <p><b>8.02 - </b>kocham chłopaka, yupiyupi jest wszystko supi :3</p>
             <p>
-              1.02 - już powiedziałam chłopakowi że będdzie moim walentykniem,
-              nie ma wyboru
+              <b>1.02 - </b>już powiedziałam chłopakowi że będdzie moim
+              walentykniem, nie ma wyboru
             </p>
           </div>
         </div>
-        <div class="comment">nwm jak sie komentarze robi ale ogarne</div>
+        <div class="comment">
+          <iframe
+            src="https://www5.cbox.ws/box/?boxid=955597&boxtag=nn2r9G"
+            class="chat-box"
+          ></iframe>
+        </div>
       </div>
       <div class="bottom">
-        <h2>To jeszcze nwm do czego</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cumque
-          itaque, deserunt voluptatem incidunt laudantium animi accusamus
-          officiis est perspiciatis. Qui tempore quasi mollitia facilis
-          obcaecati laborum odio
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsum
-          corrupti numquam vero, obcaecati recusandae molestias voluptate unde
-          quisquam deserunt ullam at consectetur rem magni vel. Voluptatum vitae
-        </p>
+        <div class="bottom-text">
+          <h2>Eurowizja Już Niedługo!!<span id="countdown"></span>!!</h2>
+          <p>
+            Niedługo startuje Eurowizja, a ja już mam swojego faworyta na ten
+            rok. To Dolly Style z piosenką „Yihaa”, która ma w sobie tyle
+            energii i radości, że od razu wpada w ucho. Trzymam za nich kciuki!
+          </p>
+          <p>
+            Konkurs w Bazylei zapowiada się świetnie, a Polska wybierze swojego
+            reprezentanta już w lutym. Ale dla mnie „Yihaa” to hit, który może
+            podbić scenę. Nie mogę się doczekać maja i tej muzycznej uczty!
+          </p>
+        </div>
       </div>
     </div>
   </body>

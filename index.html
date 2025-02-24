@@ -7,10 +7,8 @@
     <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
   </head>
   <script>
-    // Ustaw datę Eurowizji 2025 (13 maja 2025, 20:00 UTC)
     const eurovisionDate = new Date("May 13, 2025 20:00:00 GMT+0000").getTime();
 
-    // Funkcja odliczania
     function updateCountdown() {
       const now = new Date().getTime();
       const timeLeft = eurovisionDate - now;
@@ -22,25 +20,21 @@
       const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-      // Wyświetl odliczanie
       document.getElementById(
         "countdown"
       ).innerHTML = `(${days}d ${hours}h ${minutes}m ${seconds}s)`;
 
-      // Jeśli czas się skończy
       if (timeLeft < 0) {
         document.getElementById("countdown").innerHTML = "(Już jest!)";
       }
     }
 
-    // Aktualizuj co sekundę
     setInterval(updateCountdown, 1000);
-    updateCountdown(); // Wywołaj od razu, by uniknąć opóźnienia
+    updateCountdown();
 
-    // Ustaw scroll na górę po załadowaniu strony
     window.onload = function () {
       const updateList = document.querySelector(".update-list");
-      updateList.scrollTop = 0; /* Przewija na samą górę */
+      updateList.scrollTop = 0;
     };
   </script>
   <body>

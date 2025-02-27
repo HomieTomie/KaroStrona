@@ -1,0 +1,274 @@
+:root {
+    --main-background: #F3E7DC;
+    --div-background: #EBF5FE;
+    --div-border: #9FA9B2;
+    --comments: #FFFFFF;
+    --selected-button: #D4E6F1;
+}
+
+@font-face {
+    font-family: 'Blogger Sans';
+    src: url('/fonts/BloggerSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('/fonts/Caveat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dynalight';
+    src: url('/fonts/Dynalight-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -1000px -1000px;
+    }
+}
+
+body {
+    background-image: url(/images/coquette_seamless_pattern\ -\ Copy.jpg);
+    background-size: 1000px 1000px;
+    background-repeat: repeat;
+    font-family: 'Dynalight', cursive;
+    font-size: 13px;
+    animation: moveBackground 100s linear infinite;
+}
+
+button {
+    font-family: 'Dynalight', cursive;
+}
+
+.main {
+    background-image: url(/images/main-polkadot-bg.gif);
+    background-repeat: repeat;
+    background-size: auto;
+    border: 25px solid transparent;
+    padding: 1em;
+    border-image: url(/images/main-background-background.gif) round;
+    border-image-slice: 16 17 17 16;
+    border-image-outset: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 90vh;
+    border-radius: 5%;
+    overflow-y: auto;
+}
+
+.name,
+.top,
+.praca1,
+.praca2,
+.praca3 {
+    background-color: var(--div-background);
+    background-image: url(/images/tło-divy.gif);
+    background-repeat: repeat;
+    background-size: auto;
+    border: 1px solid var(--div-border);
+}
+
+.name {
+    width: 90%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5% 5% 0 0;
+}
+
+.profile-image {
+    width: 15%;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+
+.profile-image.right {
+    margin-right: 4%;
+    margin-left: 4%;
+}
+
+.contain {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20%;
+}
+
+.profile-text {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-text p {
+    margin: 0;
+    font-size: 200%;
+}
+
+.top {
+    width: 90%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 2%;
+}
+
+.navigation-button {
+    flex: 1;
+    margin: 0 5px;
+    border: 1px solid var(--div-border);
+    background-color: var(--div-background);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-family: 'Dynalight', cursive;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-button:hover {
+    background-color: var(--selected-button);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navigation-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-button.selected {
+    background-color: var(--selected-button);
+}
+
+.welcome {
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.welcome-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.welcome h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    text-align: left;
+    margin: 0;
+}
+
+.welcome-image {
+    width: 30%;
+    height: auto;
+    margin-left: 10px;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.praca1,
+.praca2,
+.praca3 {
+    width: 90%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+.praca1 .obraz,
+.praca2 .obraz,
+.praca3 .obraz {
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 4%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.praca1 .komentarz,
+.praca2 .komentarz,
+.praca3 .komentarz {
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 4%;
+    margin-right: 2%;
+    font-size: 14px;
+    text-align: justify;
+    padding: 10px;
+    border: 1px solid var(--div-border);
+    background-color: var(--comments);
+}
+
+.praca2 {
+    flex-direction: row-reverse;
+}
+
+.praca3 {
+    flex-direction: column;
+    align-items: center;
+}
+
+.praca3 .obraz {
+    width: 80%;
+}
+
+.praca3 .komentarz {
+    width: 80%;
+}

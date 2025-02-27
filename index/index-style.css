@@ -51,14 +51,14 @@ button {
 }
 
 .main{
-    background-image: url(images/main-polkadot-bg.gif);
+    background-image: url(/images/main-polkadot-bg.gif);
     background-repeat: repeat;
     background-size: auto;
 
     border: 25px solid transparent;
     padding: 1em;
 
-    border-image: url(images/main-background-background.gif) round;
+    border-image: url(/images/main-background-background.gif) round;
     border-image-slice: 16 17 17 16;
     border-image-outset: 5px;
 
@@ -74,9 +74,14 @@ button {
     border-radius: 5%;
 }
 
-.name, .top, .middle, .bottom{
+.name,
+.top,
+.middle,
+.bottom {
     background-color: var(--div-background);
-    border-radius: 5%;
+    background-image: url(/images/tło-divy.gif);
+    background-repeat: repeat;
+    background-size: auto;
     border: 1px solid var(--div-border);
 }
 
@@ -88,6 +93,7 @@ button {
     margin-top: 2%;
     display: flex;
     flex-direction: row;
+    border-radius: 5% 5% 0 0;
 }
 
 .profile-image{
@@ -124,25 +130,46 @@ button {
     flex-direction: row;
 }
 
-.navigation{
+.navigation {
     width: 25%;
-    height: 80%;
     margin-top: 5%;
     margin-bottom: 1%;
-    margin-left: 4%;
-    margin-right: 0%;
     display: flex;
     flex-direction: column;
-    border-right-style: solid;
-
+    border-right: 1px solid var(--div-border);
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
-.navigation-button{
-    margin-right: 2%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+.navigation-button {
     width: 80%;
-    height: 15%;
+    padding: 8px;
+    border: 1px solid var(--div-border);
+    background-color: var(--div-background);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Dynalight', cursive;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-button:hover {
+    background-color: var(--selected-button);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navigation-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .welcome{
@@ -224,6 +251,7 @@ button {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    border-radius: 0 0 5% 5%;
 }
 
 .bottom-text {

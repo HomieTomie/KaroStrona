@@ -33,17 +33,17 @@
     }
 
     to {
-        background-position: -1000px -1000px;
+        background-position: 0px -1000px;
     }
 }
 
 body {
-    background-image: url(/images/coquette_seamless_pattern\ -\ Copy.jpg);
-    background-size: 1000px 1000px;
+    background-image: url(/images/o-mnie/o-mnie-tło.gif);
+    background-size: auto;
     background-repeat: repeat;
     font-family: 'Dynalight', cursive;
     font-size: 13px;
-    animation: moveBackground 100s linear infinite;
+    animation: moveBackground 120s linear infinite;
 }
 
 button {
@@ -51,12 +51,12 @@ button {
 }
 
 .main {
-    background-image: url(/images/main-polkadot-bg.gif);
+    background-image: url(/images/o-mnie/o-mnie-not-border.gif);
     background-repeat: repeat;
     background-size: auto;
     border: 25px solid transparent;
     padding: 1em;
-    border-image: url(/images/main-background-background.gif) round;
+    border-image: url(/images/o-mnie/o-mnie-bg.gif) round;
     border-image-slice: 16 17 17 16;
     border-image-outset: 5px;
     display: flex;
@@ -94,9 +94,11 @@ button {
 .profile-image {
     width: 15%;
     margin-left: 8%;
+    margin-right: 8%;
 }
 
 .profile-image.right {
+    margin-left: 8%;
     margin-right: 8%;
 }
 
@@ -165,6 +167,7 @@ button {
 }
 
 .welcome {
+    margin-top: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -174,6 +177,14 @@ button {
 
 .welcome-banner {
     width: 20%;
+}
+
+.welcome-banner.left {
+    margin-top: 2%;
+}
+
+.welcome-banner.right {
+    margin-top: 40%;
 }
 
 .welcome-banner img {

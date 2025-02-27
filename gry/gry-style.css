@@ -33,12 +33,12 @@
     }
 
     to {
-        background-position: -1000px -1000px;
+        background-position: 1000px -1000px;
     }
 }
 
 body {
-    background-image: url(/images/coquette_seamless_pattern\ -\ Copy.jpg);
+    background-image: url(/images/gry/a.png);
     background-size: 1000px 1000px;
     background-repeat: repeat;
     font-family: 'Dynalight', cursive;
@@ -51,12 +51,12 @@ button {
 }
 
 .main {
-    background-image: url(/images/main-polkadot-bg.gif);
+    background-image: url(/images/gry/gry-bg-polkadot.gif);
     background-repeat: repeat;
     background-size: auto;
     border: 25px solid transparent;
     padding: 1em;
-    border-image: url(/images/main-background-background.gif) round;
+    border-image: url(/images/gry/gry-bg.gif) round;
     border-image-slice: 16 17 17 16;
     border-image-outset: 5px;
     display: flex;

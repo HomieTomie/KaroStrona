@@ -127,7 +127,7 @@ button {
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    margin-bottom: 5%;
+    margin-top: 2%;
 }
 
 .navigation-button {
